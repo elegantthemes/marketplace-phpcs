@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<ruleset name="ElegantThemes">
+  <description>The Elegant Themes Marketplace Coding Standard</description>
+
+  <ini name="memory_limit" value="512M"/>
+
+  <rule ref="Generic.PHP.Syntax"/>
+  <rule ref="Generic.PHP.DeprecatedFunctions"/>
+  <rule ref="Generic.PHP.ForbiddenFunctions"/>
+  <rule ref="Generic.Functions.CallTimePassByReference"/>
+
+  <!-- General Standards -->
+  <rule ref="Generic.Commenting.Todo"/>
+
+  <!-- PHP Version Compatibility -->
+  <rule ref="PHPCompatibility"/>
+
+  <config name="testVersion" value="5.6-"/>
+
+  <!-- Wordpress Standards -->
+  <config name="minimum_supported_wp_version" value="4.6"/>
+
+  <rule ref="WordPress.NamingConventions.PrefixAllGlobals"/>
+  <rule ref="WordPress.WP.GlobalVariablesOverride"/>
+
+  <rule ref="WordPress.Security.EscapeOutput">
+    <properties>
+      <property name="customEscapingFunctions" type="array" value="et_get_safe_localization"/>
+      <property name="customAutoEscapedFunctions" type="array"
+                value="et_core_intentionally_unescaped,et_core_esc_previously,et_core_esc_wp,et_pb_process_header_level,get_the_category_list,paginate_links"/>
+    </properties>
+  </rule>
+
+  <rule ref="WordPress.Security.ValidatedSanitizedInput"/>
+
+  <rule ref="WordPress.PHP.DevelopmentFunctions"/>
+  <rule ref="WordPress.PHP.DiscouragedPHPFunctions"/>
+  <rule ref="WordPress.WP.DeprecatedFunctions"/>
+  <rule ref="WordPress.WP.DeprecatedClasses"/>
+  <rule ref="WordPress.WP.DeprecatedParameters"/>
+  <rule ref="WordPress.WP.DeprecatedParameterValues"/>
+  <rule ref="WordPress.WP.AlternativeFunctions"/>
+  <rule ref="WordPress.WP.DiscouragedConstants"/>
+  <rule ref="WordPress.WP.DiscouragedFunctions"/>
+
+  <rule ref="WordPress.WP.EnqueuedResources"/>
+  <rule ref="WordPress.DB.PreparedSQL"/>
+  <rule ref="WordPress.WP.GlobalVariablesOverride"/>
+  <rule ref="WordPress.PHP.StrictComparisons"/>
+  <rule ref="WordPress.Security.SafeRedirect"/>
+  <rule ref="WordPress.NamingConventions.ValidPostTypeSlug"/>
+
+  <rule ref="WordPress.Security.NonceVerification">
+    <type>error</type>
+    <properties>
+      <property name="customNonceVerificationFunctions" type="array"
+                value="et_core_nonce_verified_previously,et_core_security_check,et_core_security_check_passed"/>
+    </properties>
+  </rule>
+
+  <!-- BadFunctions -->
+
+  <config name="ParanoiaMode" value="1"/>
+
+  <!-- PHP functions that can lead to security issues -->
+  <rule ref="Security.BadFunctions.Asserts"/>
+  <rule ref="Security.BadFunctions.Backticks"/>
+  <rule ref="Security.BadFunctions.CallbackFunctions"/>
+  <rule ref="Security.BadFunctions.CryptoFunctions"/>
+  <rule ref="Security.BadFunctions.EasyRFI"/>
+<!--  The below rule is already detected with WordPress.Security.EscapeOutput -->
+<!--  <rule ref="Security.BadFunctions.EasyXSS">-->
+<!--    <properties>-->
+<!--      &lt;!&ndash; Comment out to follow global ParanoiaMode &ndash;&gt;-->
+<!--      <property name="forceParanoia" value="1"/>-->
+<!--    </properties>-->
+<!--  </rule>-->
+  <rule ref="Security.BadFunctions.ErrorHandling"/>
+  <rule ref="Security.BadFunctions.FilesystemFunctions"/>
+  <rule ref="Security.BadFunctions.FringeFunctions"/>
+  <rule ref="Security.BadFunctions.FunctionHandlingFunctions"/>
+  <rule ref="Security.BadFunctions.Mysqli"/>
+  <rule ref="Security.BadFunctions.NoEvals"/>
+  <rule ref="Security.BadFunctions.Phpinfos"/>
+  <rule ref="Security.BadFunctions.PregReplace"/>
+  <rule ref="Security.BadFunctions.SQLFunctions"/>
+  <rule ref="Security.BadFunctions.SystemExecFunctions"/>
+
+  <!-- Misc -->
+  <rule ref="Security.Misc.BadCorsHeader"/>
+<!--  <rule ref="Security.Misc.IncludeMismatch"/>-->
+</ruleset>
