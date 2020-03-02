@@ -7,8 +7,7 @@
     "php" : ">=5.6.0,<8.0.0-dev",
     "squizlabs/php_codesniffer" : "^3.0",
     "phpcompatibility/php-compatibility": "*",
-    "wp-coding-standards/wpcs": "*",
-    "pheromone/phpcs-security-audit": "^2.0"
+    "wp-coding-standards/wpcs": "*"
   },
   "type" : "phpcodesniffer-standard"
 }
