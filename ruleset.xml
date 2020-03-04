@@ -32,7 +32,6 @@
   </rule>
 
   <rule ref="WordPress.Security.ValidatedSanitizedInput"/>
-
   <rule ref="WordPress.PHP.DevelopmentFunctions"/>
   <rule ref="WordPress.PHP.DiscouragedPHPFunctions"/>
   <rule ref="WordPress.WP.DeprecatedFunctions"/>
@@ -42,14 +41,11 @@
   <rule ref="WordPress.WP.AlternativeFunctions"/>
   <rule ref="WordPress.WP.DiscouragedConstants"/>
   <rule ref="WordPress.WP.DiscouragedFunctions"/>
-
   <rule ref="WordPress.WP.EnqueuedResources"/>
   <rule ref="WordPress.DB.PreparedSQL"/>
   <rule ref="WordPress.WP.GlobalVariablesOverride"/>
-  <!--  <rule ref="WordPress.PHP.StrictComparisons"/>-->
   <rule ref="WordPress.Security.SafeRedirect"/>
   <rule ref="WordPress.NamingConventions.ValidPostTypeSlug"/>
-
   <rule ref="WordPress.Security.NonceVerification">
     <type>error</type>
     <properties>
