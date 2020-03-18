@@ -2,7 +2,7 @@
 <ruleset name="ElegantThemes">
   <description>The Elegant Themes Marketplace Coding Standard</description>
 
-  <ini name="memory_limit" value="512M"/>
+  <ini name="memory_limit" value="-1"/>
 
   <rule ref="Generic.PHP.Syntax"/>
   <rule ref="Generic.PHP.DeprecatedFunctions"/>
