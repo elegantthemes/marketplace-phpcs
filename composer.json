@@ -1,13 +1,13 @@
 {
-  "name" : "elegantthemes/marketplace-phpcs",
-  "description" : "Security coding standards for the elegant themes marketplace.",
+  "name": "elegantthemes/marketplace-phpcs",
+  "description": "Security coding standards for the elegant themes marketplace.",
   "license": "proprietary",
-  "require" : {
+  "require": {
     "dealerdirect/phpcodesniffer-composer-installer": "*",
-    "php" : ">=5.6.0,<8.0.0-dev",
-    "squizlabs/php_codesniffer" : "^3.0",
+    "php": ">=5.6.0,<8.0.0-dev",
+    "squizlabs/php_codesniffer": "^3.0",
     "phpcompatibility/php-compatibility": "*",
     "wp-coding-standards/wpcs": "*"
   },
-  "type" : "phpcodesniffer-standard"
+  "type": "phpcodesniffer-standard"
 }
