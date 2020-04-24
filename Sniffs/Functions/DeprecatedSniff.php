@@ -7,11 +7,13 @@ use PHP_CodeSniffer\Standards\Generic\Sniffs\PHP\ForbiddenFunctionsSniff;
 class DeprecatedSniff extends ForbiddenFunctionsSniff {
 
 	public $forbiddenFunctions = [
-		'et_sanitize_value_by_cap'     => 'et_core_sanitize_value_by_cap',
-		'et_intentionally_unsanitized' => 'et_core_intentionally_unsanitized',
-		'et_intentionally_unescaped'   => 'et_core_intentionally_unescaped',
-		'et_esc_wp'                    => 'et_core_esc_wp',
-		'et_esc_previously'            => 'et_core_esc_previously',
+		'et_sanitize_value_by_cap'      => 'et_core_sanitize_value_by_cap',
+		'et_intentionally_unsanitized'  => 'et_core_intentionally_unsanitized',
+		'et_intentionally_unescaped'    => 'et_core_intentionally_unescaped',
+		'et_esc_wp'                     => 'et_core_esc_wp',
+		'et_esc_previously'             => 'et_core_esc_previously',
+		'et_fb_enabled'                 => 'et_core_is_fb_enabled',
+		'et_pb_generate_responsive_css' => 'ET_Builder_Module_Helper_ResponsiveOptions::instance()->generate_responsive_css()',
 	];
 
 	protected function addError( $phpcsFile, $stackPtr, $function, $pattern = null ) {
