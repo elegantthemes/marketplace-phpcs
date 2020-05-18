@@ -47,6 +47,8 @@
   <rule ref="WordPress.Security.SafeRedirect"/>
   <rule ref="WordPress.NamingConventions.ValidPostTypeSlug"/>
   <rule ref="WordPress.Security.PluginMenuSlug"/>
+  <rule ref="WordPress.CodeAnalysis.EscapedNotTranslated"/>
+  <rule ref="WordPress.DateTime.CurrentTimeTimestamp"/>
   <rule ref="WordPress.Security.NonceVerification">
     <type>error</type>
     <properties>
