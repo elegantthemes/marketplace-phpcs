@@ -4,25 +4,57 @@
 
   <ini name="memory_limit" value="-1"/>
 
+  <!-- PHP Version Compatibility -->
+  <config name="testVersion" value="5.6-"/>
+  <rule ref="PHPCompatibility"/>
+
+  <!-- Generic PHP Standards -->
+  <rule ref="Generic.PHP.DisallowShortOpenTag"/>
+  <rule ref="Generic.PHP.DisallowAlternativePHPTags"/>
+
   <rule ref="Generic.PHP.Syntax"/>
   <rule ref="Generic.PHP.DeprecatedFunctions"/>
   <rule ref="Generic.PHP.ForbiddenFunctions"/>
+  <rule ref="Generic.PHP.DiscourageGoto">
+    <type>error</type>
+    <message>The "goto" language construct should not be used.</message>
+  </rule>
+
   <rule ref="Generic.Functions.CallTimePassByReference"/>
 
-  <!-- General Standards -->
-  <rule ref="Generic.Commenting.Todo"/>
+  <rule ref="Generic.Classes.DuplicateClassName"/>
 
-  <!-- PHP Version Compatibility -->
-  <rule ref="PHPCompatibility"/>
+  <rule ref="Squiz.PHP.Eval.Discouraged">
+    <type>error</type>
+    <message>eval() is a security risk so not allowed.</message>
+  </rule>
 
-  <config name="testVersion" value="5.6-"/>
+  <rule ref="PSR2.Files.ClosingTag"/>
 
-  <!-- Wordpress Standards -->
-  <config name="minimum_supported_wp_version" value="4.6"/>
+  <!-- Wordpress CodeAnalysis Standards -->
+  <rule ref="WordPress.CodeAnalysis.EscapedNotTranslated"/>
 
+  <!-- Wordpress all DateTime Standards -->
+  <rule ref="WordPress.DateTime"/>
+
+  <!-- Wordpress all DB Standards -->
+  <rule ref="WordPress.DB"/>
+
+  <!-- Wordpress NamingConventions Standards -->
   <rule ref="WordPress.NamingConventions.PrefixAllGlobals"/>
-  <rule ref="WordPress.WP.GlobalVariablesOverride"/>
+  <rule ref="WordPress.NamingConventions.ValidHookName"/>
+  <rule ref="WordPress.NamingConventions.ValidPostTypeSlug"/>
 
+  <!-- Wordpress PHP Standards -->
+  <rule ref="WordPress.PHP.DevelopmentFunctions"/>
+  <rule ref="WordPress.PHP.DiscouragedPHPFunctions"/>
+  <rule ref="WordPress.PHP.DontExtract"/>
+  <rule ref="WordPress.PHP.NoSilencedErrors"/>
+  <rule ref="WordPress.PHP.IniSet"/>
+  <rule ref="WordPress.PHP.POSIXFunctions"/>
+  <rule ref="WordPress.PHP.RestrictedPHPFunctions"/>
+
+  <!-- Wordpress Security Standards -->
   <rule ref="WordPress.Security.EscapeOutput">
     <properties>
       <property name="customEscapingFunctions" type="array" value="et_get_safe_localization"/>
@@ -31,24 +63,6 @@
     </properties>
   </rule>
 
-  <rule ref="WordPress.Security.ValidatedSanitizedInput"/>
-  <rule ref="WordPress.PHP.DevelopmentFunctions"/>
-  <rule ref="WordPress.PHP.DiscouragedPHPFunctions"/>
-  <rule ref="WordPress.WP.DeprecatedFunctions"/>
-  <rule ref="WordPress.WP.DeprecatedClasses"/>
-  <rule ref="WordPress.WP.DeprecatedParameters"/>
-  <rule ref="WordPress.WP.DeprecatedParameterValues"/>
-  <rule ref="WordPress.WP.AlternativeFunctions"/>
-  <rule ref="WordPress.WP.DiscouragedConstants"/>
-  <rule ref="WordPress.WP.DiscouragedFunctions"/>
-  <rule ref="WordPress.WP.EnqueuedResources"/>
-  <rule ref="WordPress.DB"/>
-  <rule ref="WordPress.WP.GlobalVariablesOverride"/>
-  <rule ref="WordPress.Security.SafeRedirect"/>
-  <rule ref="WordPress.NamingConventions.ValidPostTypeSlug"/>
-  <rule ref="WordPress.Security.PluginMenuSlug"/>
-  <rule ref="WordPress.CodeAnalysis.EscapedNotTranslated"/>
-  <rule ref="WordPress.DateTime.CurrentTimeTimestamp"/>
   <rule ref="WordPress.Security.NonceVerification">
     <type>error</type>
     <properties>
@@ -56,4 +70,23 @@
                 value="et_core_nonce_verified_previously,et_core_security_check,et_core_security_check_passed"/>
     </properties>
   </rule>
+
+  <rule ref="WordPress.Security.PluginMenuSlug"/>
+  <rule ref="WordPress.Security.SafeRedirect"/>
+  <!--  <rule ref="WordPress.Security.ValidatedSanitizedInput"/>-->
+
+  <!-- Wordpress WP Standards -->
+  <config name="minimum_supported_wp_version" value="4.6"/>
+  <rule ref="WordPress.WP.AlternativeFunctions"/>
+  <rule ref="WordPress.WP.DeprecatedClasses"/>
+  <rule ref="WordPress.WP.DeprecatedFunctions"/>
+  <rule ref="WordPress.WP.DeprecatedParameters"/>
+  <rule ref="WordPress.WP.DeprecatedParameterValues"/>
+  <rule ref="WordPress.WP.DiscouragedConstants"/>
+  <rule ref="WordPress.WP.DiscouragedFunctions"/>
+
+  <rule ref="WordPress.WP.EnqueuedResources"/>
+  <rule ref="WordPress.WP.GlobalVariablesOverride"/>
+  <rule ref="WordPress.WP.PostsPerPage"/>
+  <!--  <rule ref="WordPress.WP.TimezoneChange"/> deprecated -->
 </ruleset>
