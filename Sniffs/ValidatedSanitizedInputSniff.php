@@ -6,7 +6,7 @@
  * @license https://opensource.org/licenses/MIT MIT
  */
 
-namespace ElegantThemes\Sniffs;
+namespace ET\ElegantThemes\Sniffs;
 
 use WordPressCS\WordPress\Sniff;
 use PHP_CodeSniffer\Util\Tokens;

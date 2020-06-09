@@ -1,6 +1,6 @@
 <?php
 
-namespace ElegantThemes\Sniffs;
+namespace ET\ElegantThemes\Sniffs;
 
 use PHP_CodeSniffer\Standards\Generic\Sniffs\PHP\ForbiddenFunctionsSniff;
 
