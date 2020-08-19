@@ -1,4 +1,4 @@
-# Requirements
+# Prerequisites
 
 [Git](https://git-scm.com/downloads)  (Distributed version-control system)
 
