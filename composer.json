@@ -9,5 +9,10 @@
     "phpcompatibility/php-compatibility": "*",
     "wp-coding-standards/wpcs": "*"
   },
-  "type": "phpcodesniffer-standard"
+  "type": "phpcodesniffer-standard",
+  "config": {
+    "allow-plugins": {
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
 }
