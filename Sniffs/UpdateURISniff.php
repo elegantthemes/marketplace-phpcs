@@ -12,7 +12,7 @@ class UpdateURISniff implements Sniff {
 	 * @return array(int)
 	 */
 	public function register() {
-		return [ T_COMMENT ];
+		return [ T_COMMENT, T_DOC_COMMENT_STRING ];
 	}
 
 	/**
