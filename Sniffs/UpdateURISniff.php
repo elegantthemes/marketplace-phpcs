@@ -9,7 +9,7 @@ class UpdateURISniff implements Sniff {
 
 	/**
 	 * Returns the token types that this sniff is interested in.
-	 * @return array(int)
+	 * @return mixed[]
 	 */
 	public function register() {
 		return [ T_COMMENT, T_DOC_COMMENT_STRING ];
