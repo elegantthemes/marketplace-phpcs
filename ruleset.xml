@@ -35,7 +35,15 @@
   <rule ref="WordPress.CodeAnalysis.EscapedNotTranslated"/>
 
   <!-- Wordpress all DateTime Standards -->
-  <rule ref="WordPress.DateTime"/>
+  <!-- Exclude specific sniffs related to DateTime functions -->
+  <rule ref="WordPress.DateTime">
+    <exclude name="WordPress.DateTime.CurrentTimeTimestamp"/>
+    <exclude name="WordPress.DateTime.RestrictedFunctions.date_date"/>
+    <exclude name="WordPress.DateTime.RestrictedFunctions.date_default_timezone_get"/>
+    <exclude name="WordPress.DateTime.RestrictedFunctions.date_default_timezone_set"/>
+    <exclude name="WordPress.DateTime.RestrictedFunctions.date_time"/>
+    <exclude name="WordPress.DateTime.RestrictedFunctions.date_mktime"/>
+  </rule>
 
   <!-- Wordpress all DB Standards -->
   <rule ref="WordPress.DB"/>
