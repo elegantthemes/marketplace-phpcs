@@ -2,6 +2,14 @@
 <ruleset name="ElegantThemes">
   <description>The Elegant Themes Marketplace Coding Standard</description>
 
+  <!-- Only scan PHP files -->
+  <arg name="extensions" value="php"/>
+
+  <!-- Exclude unnecessary folders & files  -->
+  <exclude-pattern>*/vendor/*</exclude-pattern>
+  <exclude-pattern>*/node_modules/*</exclude-pattern>
+  <exclude-pattern>*/build/*</exclude-pattern>
+
   <ini name="memory_limit" value="-1"/>
 
   <!-- PHP Version Compatibility -->
